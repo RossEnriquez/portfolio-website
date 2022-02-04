@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text, Heading, Image } from "@chakra-ui/react";
-import headshot from "/imgs/REC 2021 Headshot.jpg";
+import headshot from "/imgs/aboutme.jpg";
 
 const AboutPage = ({ theme }) => {
   const txt_heading = {

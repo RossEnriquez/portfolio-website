@@ -7,7 +7,7 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
-import headshot from "/imgs/ross.jpg";
+import SocialsCard from "../components/socialsCard";
 
 const ConnectPage = ({ theme }) => {
   const txt_heading = {
@@ -29,7 +29,9 @@ const ConnectPage = ({ theme }) => {
           Let's Connect!
         </Heading>
       </Flex>
-      <Center></Center>
+      <Center m="5% 0">
+        <SocialsCard theme={theme} />
+      </Center>
     </>
   );
 };
