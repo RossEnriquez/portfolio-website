@@ -1,7 +1,14 @@
-import { Box, Button, Flex, Text, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Image, Button } from "@chakra-ui/react";
 import headshot from "/imgs/aboutme.jpg";
+import { useInViewport } from "react-in-viewport";
+import { useEffect, useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const AboutPage = ({ theme }) => {
+  //   const myRef = useRef();
+  //   const { inViewport } = useInViewport(myRef);
+  //   const showComponent = useAnimation();
+
   const txt_heading = {
     fontWeight: "bold",
     fontSize: 72,
@@ -17,18 +24,19 @@ const AboutPage = ({ theme }) => {
     height: "128px",
     background: theme[2],
   };
+
   return (
     <>
       <Box mt="125px">
-        <Flex justifyContent="space-between" ml="125px">
-          <Heading style={txt_heading} alignSelf="center">
+        <Flex ml="125px" justifyContent="space-between">
+          <Heading style={txt_heading} alignSelf="center" data-aos="fade-up">
             About me
           </Heading>
-          <Box style={accent} w="78%" />
+          <Box style={accent} w="78%" data-aos="slide-left" />
         </Flex>
         <Flex mt="50px">
           <Box w="65vw">
-            <Text style={txt_body} w="880px" ml="10%">
+            <Text style={txt_body} w="880px" ml="10%" data-aos="fade-up">
               I’m a third-year{" "}
               <text style={txt_bold}>
                 Computer Engineering (Software option)
@@ -40,13 +48,13 @@ const AboutPage = ({ theme }) => {
               you can probably find me playing video games or listening to
               music!
             </Text>
-            <Flex mt="50px">
+            <Flex mt="50px" data-aos="slide-right">
               <Box style={accent} w="10%" mr="3%" left="125px" />
               <Heading style={txt_heading} alignSelf="center">
                 What I'm currently up to
               </Heading>
             </Flex>
-            <Text style={txt_body} m="50px 250px" w="850px">
+            <Text style={txt_body} m="50px 250px" w="850px" data-aos="fade-up">
               <Box>
                 <text style={txt_bold}>Portable Portfolio</text>
               </Box>
@@ -60,6 +68,7 @@ const AboutPage = ({ theme }) => {
             objectFit="cover"
             borderRadius="50px"
             boxShadow="lg"
+            data-aos="slide-left"
           />
         </Flex>
       </Box>

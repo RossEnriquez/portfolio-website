@@ -1,22 +1,27 @@
 import {
   Box,
-  Button,
-  Flex,
   Text,
   Heading,
   Image,
-  LinkBox,
-  LinkOverlay,
   Center,
-  Input,
   IconButton,
+  useClipboard,
+  useToast,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 import { MdOutlineContentCopy } from "react-icons/md";
+import { AiOutlineMail } from "react-icons/ai";
 import dp from "/imgs/linkedin.jpg";
 import img from "/imgs/test-proj.png";
+import { useState } from "react";
 
 const SocialsCard = ({ theme }) => {
+  const email = "ross.enriquez@ryerson.ca";
+  const [clipboard, setClipboard] = useState(email);
+  const { hasCopied, onCopy } = useClipboard(clipboard);
+  const toast = useToast();
+
   const title = {
     color: theme[3],
     fontWeight: "bold",
@@ -25,6 +30,7 @@ const SocialsCard = ({ theme }) => {
   const body = {
     fontSize: 20,
   };
+
   return (
     <>
       <Box w="30%" borderRadius="15px" boxShadow="base" overflow="hidden">
@@ -49,7 +55,10 @@ const SocialsCard = ({ theme }) => {
           <Text color="gray.500">Brampton, Ontario, Canada</Text>
         </Center>
         <Center mb="5%">
-          <Text>ross.enriquez@ryerson.ca</Text>
+          <Center mt="1%">
+            <AiOutlineMail />
+          </Center>
+          <Text ml="1%">{email}</Text>
           <IconButton
             aria-label="Copy Email"
             icon={<MdOutlineContentCopy />}
@@ -58,13 +67,33 @@ const SocialsCard = ({ theme }) => {
             _hover={{ bg: "none" }}
             _active={{ bg: "gray.100" }}
             _focus={{ outline: "none" }}
-            onClick={() => {}}
+            onClick={() => {
+              setClipboard(email);
+              onCopy();
+              toast({
+                title: "Copied!",
+                status: "success",
+                duration: 1000,
+              });
+            }}
           />
         </Center>
         <Center mb="10%" justifyContent="space-evenly">
-          <SocialIcon url="https://github.com/RossEnriquez" />
-          <SocialIcon url="https://www.linkedin.com/in/ross-enriquez/" />
-          <SocialIcon url="https://www.instagram.com/en.riquez/?hl=en" />
+          <motion.div
+            whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+          >
+            <SocialIcon url="https://github.com/RossEnriquez" />
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+          >
+            <SocialIcon url="https://www.linkedin.com/in/ross-enriquez/" />
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+          >
+            <SocialIcon url="https://www.instagram.com/en.riquez/?hl=en" />
+          </motion.div>
         </Center>
       </Box>
     </>

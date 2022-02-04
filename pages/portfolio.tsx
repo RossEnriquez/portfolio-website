@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Text,
-  Heading,
-  Image,
-  Center,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Center } from "@chakra-ui/react";
 import ProjectModule from "../components/projectModule";
 import img from "/imgs/test-proj.png";
 
@@ -59,26 +51,28 @@ const PortfolioPage = ({ theme }) => {
   };
   return (
     <>
-      <Flex mt="125px" justifyContent="space-between">
-        <Box style={accent} w="39%" />
-        <Heading style={txt_heading} alignSelf="center">
-          Portfolio
-        </Heading>
-        <Box style={accent} w="39%" />
-      </Flex>
-      <Center m="25px 0">
-        <Text style={txt_body}>Here's a look at what I've built so far!</Text>
-      </Center>
-      <Center>
-        <Box w="35%" m="0 5%">
-          <ProjectModule theme={theme} info={projects.proj_1} />
-          <ProjectModule theme={theme} info={projects.proj_2} />
-        </Box>
-        <Box w="35%" m="0 5%">
-          <ProjectModule theme={theme} info={projects.proj_3} />
-          <ProjectModule theme={theme} info={projects.proj_4} />
-        </Box>
-      </Center>
+      <Box>
+        <Flex mt="125px" justifyContent="space-between">
+          <Box style={accent} w="39%" data-aos="slide-right" />
+          <Heading style={txt_heading} alignSelf="center" data-aos="fade-up">
+            Portfolio
+          </Heading>
+          <Box style={accent} w="39%" data-aos="slide-left" />
+        </Flex>
+        <Center m="25px 0">
+          <Text style={txt_body}>Here's a look at what I've built so far!</Text>
+        </Center>
+        <Center>
+          <Box w="35%" m="0 5%">
+            <ProjectModule theme={theme} info={projects.proj_1} />
+            <ProjectModule theme={theme} info={projects.proj_2} />
+          </Box>
+          <Box w="35%" m="0 5%">
+            <ProjectModule theme={theme} info={projects.proj_3} />
+            <ProjectModule theme={theme} info={projects.proj_4} />
+          </Box>
+        </Center>
+      </Box>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text, Heading, Image } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 
 const HomeBar = ({ theme }) => {
   const btn_header = {
@@ -30,6 +30,7 @@ const HomeBar = ({ theme }) => {
           >
             Home
           </Button>
+
           <Button
             style={btn_header}
             bg={theme[0]}

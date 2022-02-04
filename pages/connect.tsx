@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Text,
-  Heading,
-  Image,
-  Center,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Center } from "@chakra-ui/react";
 import SocialsCard from "../components/socialsCard";
 
 const ConnectPage = ({ theme }) => {
@@ -23,15 +15,17 @@ const ConnectPage = ({ theme }) => {
   };
   return (
     <>
-      <Flex>
-        <Box style={accent} w="65%" mr="3%" />
-        <Heading style={txt_heading} alignSelf="center">
-          Let's Connect!
-        </Heading>
-      </Flex>
-      <Center m="5% 0">
-        <SocialsCard theme={theme} />
-      </Center>
+      <Box data-aos="fade-up">
+        <Flex>
+          <Box style={accent} w="65%" mr="3%" />
+          <Heading style={txt_heading} alignSelf="center">
+            Let's Connect!
+          </Heading>
+        </Flex>
+        <Center m="5% 0">
+          <SocialsCard theme={theme} />
+        </Center>
+      </Box>
     </>
   );
 };
