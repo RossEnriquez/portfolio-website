@@ -12,4 +12,4 @@ This is the first version of my portfolio website! The project is still in progr
 
 Preview the example live on [StackBlitz](http://stackblitz.com/):
 
-[![Open in StackBlitz](https://stackblitz.com/github/RossEnriquez/portfolio-website)]
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/RossEnriquez/portfolio-website)]
