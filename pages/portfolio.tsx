@@ -51,16 +51,37 @@ const PortfolioPage = ({ theme }) => {
   };
   return (
     <>
-      <Box>
+      <Box overflowX="hidden">
         <Flex mt="125px" justifyContent="space-between">
-          <Box style={accent} w="39%" data-aos="slide-right" />
-          <Heading style={txt_heading} alignSelf="center" data-aos="fade-up">
+          <Box
+            style={accent}
+            w="40%"
+            data-aos="slide-right"
+            data-aos-anchor-placement="top-center"
+          />
+          <Heading
+            style={txt_heading}
+            alignSelf="center"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
             Portfolio
           </Heading>
-          <Box style={accent} w="39%" data-aos="slide-left" />
+          <Box
+            style={accent}
+            w="40%"
+            data-aos="slide-left"
+            data-aos-anchor-placement="top-center"
+          />
         </Flex>
         <Center m="25px 0">
-          <Text style={txt_body}>Here's a look at what I've built so far!</Text>
+          <Text
+            style={txt_body}
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
+            Here's a look at what I've built so far!
+          </Text>
         </Center>
         <Center>
           <Box w="35%" m="0 5%">

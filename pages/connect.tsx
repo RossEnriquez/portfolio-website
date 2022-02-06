@@ -15,10 +15,21 @@ const ConnectPage = ({ theme }) => {
   };
   return (
     <>
-      <Box data-aos="fade-up">
+      <Box overflowX="hidden" h="100vh">
         <Flex>
-          <Box style={accent} w="65%" mr="3%" />
-          <Heading style={txt_heading} alignSelf="center">
+          <Box
+            style={accent}
+            w="65%"
+            mr="3%"
+            data-aos="slide-right"
+            data-aos-anchor-placement="top-center"
+          />
+          <Heading
+            style={txt_heading}
+            alignSelf="center"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
             Let's Connect!
           </Heading>
         </Flex>

@@ -14,7 +14,10 @@ const ProjectModule = ({ theme, info }) => {
   return (
     <>
       <motion.div whileHover={{ y: -10, transition: { duration: 0.3 } }}>
-        <LinkBox>
+        <LinkBox
+          data-aos="zoom-in-up"
+          data-aos-anchor-placement="bottom-bottom"
+        >
           <Box
             w="100%"
             p="3%"

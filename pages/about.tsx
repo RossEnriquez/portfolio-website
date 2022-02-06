@@ -27,16 +27,32 @@ const AboutPage = ({ theme }) => {
 
   return (
     <>
-      <Box mt="125px">
+      <Box mt="125px" overflowX="hidden" h="101vh">
         <Flex ml="125px" justifyContent="space-between">
-          <Heading style={txt_heading} alignSelf="center" data-aos="fade-up">
+          <Heading
+            style={txt_heading}
+            alignSelf="center"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
             About me
           </Heading>
-          <Box style={accent} w="78%" data-aos="slide-left" />
+          <Box
+            style={accent}
+            w="78%"
+            data-aos="slide-left"
+            data-aos-anchor-placement="top-center"
+          />
         </Flex>
         <Flex mt="50px">
           <Box w="65vw">
-            <Text style={txt_body} w="880px" ml="10%" data-aos="fade-up">
+            <Text
+              style={txt_body}
+              w="880px"
+              ml="10%"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+            >
               I’m a third-year{" "}
               <text style={txt_bold}>
                 Computer Engineering (Software option)
@@ -48,13 +64,23 @@ const AboutPage = ({ theme }) => {
               you can probably find me playing video games or listening to
               music!
             </Text>
-            <Flex mt="50px" data-aos="slide-right">
+            <Flex
+              mt="50px"
+              data-aos="slide-right"
+              data-aos-anchor-placement="top-center"
+            >
               <Box style={accent} w="10%" mr="3%" left="125px" />
               <Heading style={txt_heading} alignSelf="center">
                 What I'm currently up to
               </Heading>
             </Flex>
-            <Text style={txt_body} m="50px 250px" w="850px" data-aos="fade-up">
+            <Text
+              style={txt_body}
+              m="50px 250px"
+              w="850px"
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
               <Box>
                 <text style={txt_bold}>Portable Portfolio</text>
               </Box>
@@ -68,7 +94,8 @@ const AboutPage = ({ theme }) => {
             objectFit="cover"
             borderRadius="50px"
             boxShadow="lg"
-            data-aos="slide-left"
+            data-aos="fade-in"
+            data-aos-anchor-placement="center-bottom"
           />
         </Flex>
       </Box>

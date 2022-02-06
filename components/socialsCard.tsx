@@ -33,7 +33,14 @@ const SocialsCard = ({ theme }) => {
 
   return (
     <>
-      <Box w="30%" borderRadius="15px" boxShadow="base" overflow="hidden">
+      <Box
+        w="30%"
+        borderRadius="15px"
+        boxShadow="base"
+        overflow="hidden"
+        data-aos="flip-left"
+        data-aos-anchor-placement="top-center"
+      >
         <Image src={img.src} w="100%" />
         <Center w="100%" mt="-75px" overflowWrap="normal">
           <Image
