@@ -7,6 +7,8 @@ import {
   IconButton,
   useClipboard,
   useToast,
+  Button,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
@@ -15,11 +17,13 @@ import { AiOutlineMail } from "react-icons/ai";
 import dp from "/imgs/linkedin.jpg";
 import img from "/imgs/test-proj.png";
 import { useState } from "react";
+import ResumeModal from "./resumeModal";
 
 const SocialsCard = ({ theme }) => {
   const email = "ross.enriquez@ryerson.ca";
   const [clipboard, setClipboard] = useState(email);
   const { hasCopied, onCopy } = useClipboard(clipboard);
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const toast = useToast();
 
   const title = {
@@ -84,6 +88,7 @@ const SocialsCard = ({ theme }) => {
               });
             }}
           />
+          <Button onClick={onOpen}>View my Resume</Button>
         </Center>
         <Center mb="10%" justifyContent="space-evenly">
           <motion.div
@@ -102,6 +107,7 @@ const SocialsCard = ({ theme }) => {
             <SocialIcon url="https://www.instagram.com/en.riquez/?hl=en" />
           </motion.div>
         </Center>
+        <ResumeModal isOpen={isOpen} onClose={onClose} />
       </Box>
     </>
   );
