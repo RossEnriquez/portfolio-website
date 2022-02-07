@@ -9,12 +9,26 @@ import {
   ModalOverlay,
   Text,
 } from "@chakra-ui/react";
-import { Viewer, Worker } from "@react-pdf-viewer/core";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
-import resume from "./resume.pdf";
+import { useEffect, useRef, useState } from "react";
+import WebViewer from "@pdftron/webviewer";
+import dynamic from "next/dynamic";
+import resume from "/pdfs/Ross_Enriquez_Resume.pdf";
 
 const ResumeModal = ({ isOpen, onClose }) => {
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  const viewer = useRef(null);
+  useEffect(() => {
+    WebViewer(
+      {
+        path: "/webviewer/lib",
+        initialDoc: "/pdfs/Ross_Enriquez_Resume.pdf",
+      },
+      viewer.current
+    ).then((instance) => {
+      const { documentViewer } = instance.Core;
+      // you can now call WebViewer APIs here...
+    });
+  }, []);
+
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -23,14 +37,11 @@ const ResumeModal = ({ isOpen, onClose }) => {
           <ModalHeader>My Resume</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.12.313/build/pdf.worker.js">
-              <div style={{ height: "650px" }}>
-                <Viewer
-                  fileUrl={resume.src}
-                  plugins={[defaultLayoutPluginInstance]}
-                />
-              </div>
-            </Worker>
+            <div
+              className="webviewer"
+              ref={viewer}
+              style={{ height: "100vh" }}
+            ></div>
           </ModalBody>
           <ModalFooter>
             <Button mr={3} onClick={onClose}>
