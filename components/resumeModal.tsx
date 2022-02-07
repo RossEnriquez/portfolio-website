@@ -1,5 +1,7 @@
 import {
+  Box,
   Button,
+  Center,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -9,39 +11,31 @@ import {
   ModalOverlay,
   Text,
 } from "@chakra-ui/react";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import { useEffect, useRef, useState } from "react";
-import WebViewer from "@pdftron/webviewer";
-import dynamic from "next/dynamic";
-import resume from "/pdfs/Ross_Enriquez_Resume.pdf";
+import PDFfile from "./PDFfile";
 
 const ResumeModal = ({ isOpen, onClose }) => {
-  const viewer = useRef(null);
-  useEffect(() => {
-    WebViewer(
-      {
-        path: "/webviewer/lib",
-        initialDoc: "/pdfs/Ross_Enriquez_Resume.pdf",
-      },
-      viewer.current
-    ).then((instance) => {
-      const { documentViewer } = instance.Core;
-      // you can now call WebViewer APIs here...
-    });
-  }, []);
-
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>My Resume</ModalHeader>
+          <ModalHeader alignSelf="center">My Resume</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <div
-              className="webviewer"
-              ref={viewer}
-              style={{ height: "100vh" }}
-            ></div>
+            <Center>
+              {/* <PDFDownloadLink document={<PDFfile />} fileName="FORM">
+                {({ loading }) => {
+                  loading ? (
+                    <Button>Loading document...</Button>
+                  ) : (
+                    <Button>Download</Button>
+                  );
+                }}
+              </PDFDownloadLink> */}
+              <PDFfile />
+            </Center>
           </ModalBody>
           <ModalFooter>
             <Button mr={3} onClick={onClose}>

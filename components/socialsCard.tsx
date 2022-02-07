@@ -65,7 +65,7 @@ const SocialsCard = ({ theme }) => {
         <Center mb="5%">
           <Text color="gray.500">Brampton, Ontario, Canada</Text>
         </Center>
-        <Center mb="5%">
+        <Center>
           <Center mt="1%">
             <AiOutlineMail />
           </Center>
@@ -88,6 +88,8 @@ const SocialsCard = ({ theme }) => {
               });
             }}
           />
+        </Center>
+        <Center m="7% 0">
           <Button onClick={onOpen}>View my Resume</Button>
         </Center>
         <Center mb="10%" justifyContent="space-evenly">
