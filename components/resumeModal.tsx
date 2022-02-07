@@ -11,11 +11,10 @@ import {
   ModalOverlay,
   Text,
 } from "@chakra-ui/react";
-import { PDFDownloadLink } from "@react-pdf/renderer";
-import { useEffect, useRef, useState } from "react";
 import PDFfile from "./PDFfile";
 
-const ResumeModal = ({ isOpen, onClose }) => {
+const ResumeModal = ({ isOpen, onClose, theme }) => {
+  const resume = "/Ross_Enriquez_Resume.pdf";
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose} size="2xl">
@@ -25,19 +24,30 @@ const ResumeModal = ({ isOpen, onClose }) => {
           <ModalCloseButton />
           <ModalBody>
             <Center>
-              {/* <PDFDownloadLink document={<PDFfile />} fileName="FORM">
-                {({ loading }) => {
-                  loading ? (
-                    <Button>Loading document...</Button>
-                  ) : (
-                    <Button>Download</Button>
-                  );
-                }}
-              </PDFDownloadLink> */}
-              <PDFfile />
+              <PDFfile resume={resume} />
             </Center>
           </ModalBody>
           <ModalFooter>
+            <a
+              id="download-link"
+              href={resume}
+              style={{
+                visibility: "hidden",
+              }}
+              download
+            >
+              Download
+            </a>
+            <Button
+              mr={3}
+              bg={theme[1]}
+              color="white"
+              onClick={() => {
+                document.getElementById("download-link").click();
+              }}
+            >
+              Download
+            </Button>
             <Button mr={3} onClick={onClose}>
               Close
             </Button>

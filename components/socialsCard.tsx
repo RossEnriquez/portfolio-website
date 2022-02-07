@@ -109,7 +109,7 @@ const SocialsCard = ({ theme }) => {
             <SocialIcon url="https://www.instagram.com/en.riquez/?hl=en" />
           </motion.div>
         </Center>
-        <ResumeModal isOpen={isOpen} onClose={onClose} />
+        <ResumeModal isOpen={isOpen} onClose={onClose} theme={theme} />
       </Box>
     </>
   );
