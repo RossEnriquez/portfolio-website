@@ -3,10 +3,11 @@
 This is the first version of my portfolio website! The project is still in progress, so stay tuned for deployment!
 
 # To finish
-- adding resume section in the Connect page
-- implementing cooler animations for scrolling, fix timings
+- ~~adding resume section in the Connect page~~
+- ~~implementing cooler animations for scrolling, fix timings~~
 - add dark mode option
 - implement database (if possible)
+- add responsive styling
 
 ## Preview
 
