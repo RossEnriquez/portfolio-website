@@ -9,6 +9,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import { Link, Button, Element } from "react-scroll";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const IndexPage = () => {
@@ -23,10 +24,18 @@ const IndexPage = () => {
   return (
     <>
       <HomeBar theme={theme} />
-      <HomePage theme={theme} />
-      <AboutPage theme={theme} />
-      <PortfolioPage theme={theme} />
-      <ConnectPage theme={theme} />
+      <Element name="home">
+        <HomePage theme={theme} />
+      </Element>
+      <Element name="about">
+        <AboutPage theme={theme} />
+      </Element>
+      <Element name="portfolio">
+        <PortfolioPage theme={theme} />
+      </Element>
+      <Element name="connect">
+        <ConnectPage theme={theme} />
+      </Element>
     </>
   );
 };

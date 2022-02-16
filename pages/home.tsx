@@ -4,24 +4,20 @@ import img from "/imgs/img_home.gif";
 const HomePage = ({ theme }) => {
   const txt_heading = {
     fontWeight: "bold",
-    fontSize: 72,
+    fontSize: "4vw",
+    minFontSize: "2vw",
   };
   const txt_body = {
-    fontSize: 33,
+    fontSize: "2vw",
   };
   const txt_name = {
     color: theme[1],
   };
   return (
     <>
-      <Flex
-        m="5% 0 5% 5%"
-        justifyContent="space-between"
-        h="101vh"
-        overflowX="hidden"
-      >
+      <Flex m="5% 0 5% 5%" justifyContent="space-between" overflowX="hidden">
         <Center w="50%">
-          <Box w="100%" mb="50%">
+          <Box w="150%" mb="50%">
             <Heading style={txt_heading}>Hi!</Heading>
             <Heading style={txt_heading}>
               I'm <text style={txt_name}>Ross Enriquez</text>

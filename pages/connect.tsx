@@ -1,4 +1,6 @@
 import { Box, Flex, Heading, Center } from "@chakra-ui/react";
+import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 import SocialsCard from "../components/socialsCard";
 
 const ConnectPage = ({ theme }) => {
@@ -15,23 +17,27 @@ const ConnectPage = ({ theme }) => {
   };
   return (
     <>
-      <Box overflowX="hidden" h="100vh">
+      <Box overflowX="hidden">
         <Flex>
-          <Box
-            style={accent}
-            w="65%"
-            mr="3%"
-            data-aos="slide-right"
-            data-aos-anchor-placement="top-center"
-          />
-          <Heading
-            style={txt_heading}
-            alignSelf="center"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-          >
-            Let's Connect!
-          </Heading>
+          <Slide left>
+            <Box
+              style={accent}
+              w="60vw"
+              mr="3vw"
+              // data-aos="slide-right"
+              // data-aos-anchor-placement="top-center"
+            />
+          </Slide>
+          <Fade>
+            <Heading
+              style={txt_heading}
+              alignSelf="center"
+              // data-aos="fade-up"
+              // data-aos-anchor-placement="top-center"
+            >
+              Let's Connect!
+            </Heading>
+          </Fade>
         </Flex>
         <Center m="5% 0">
           <SocialsCard theme={theme} />
