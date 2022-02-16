@@ -1,5 +1,6 @@
 import { Box, Flex, Text, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import Bounce from "react-reveal/Bounce";
 //import img from "/imgs/test-proj.png";
 
 const ProjectModule = ({ theme, info }) => {
@@ -13,39 +14,42 @@ const ProjectModule = ({ theme, info }) => {
   };
   return (
     <>
-      <motion.div whileHover={{ y: -10, transition: { duration: 0.3 } }}>
-        <LinkBox
-          data-aos="zoom-in-up"
-          data-aos-anchor-placement="bottom-bottom"
-        >
-          <Box
-            w="100%"
-            p="3%"
-            bg="gray.100"
-            m="10% 0"
-            borderRadius="15px"
-            boxShadow="md"
+      <Bounce bottom>
+        <motion.div whileHover={{ y: -10, transition: { duration: 0.3 } }}>
+          <LinkBox
+          // data-aos="zoom-in-up"
+          // data-aos-anchor-placement="bottom-bottom"
           >
-            <LinkOverlay href={info.link}>
-              <Text style={title}>
-                {info.name} ({info.tools})
-              </Text>
-            </LinkOverlay>
-            <Flex mt="2%">
-              <Image
-                src={info.img}
-                w="50%"
-                h="180px"
-                objectFit="cover"
-                borderRadius="25px"
-              />
-              <Text style={body} ml="2%">
-                {info.desc}
-              </Text>
-            </Flex>
-          </Box>
-        </LinkBox>
-      </motion.div>
+            <Box
+              w="100%"
+              h="40vh"
+              p="3%"
+              bg="gray.100"
+              m="10% 0"
+              borderRadius="15px"
+              boxShadow="md"
+            >
+              <LinkOverlay href={info.link}>
+                <Text style={title}>
+                  {info.name} ({info.tools})
+                </Text>
+              </LinkOverlay>
+              <Flex mt="2%">
+                <Image
+                  src={info.img}
+                  w="50%"
+                  h="180px"
+                  objectFit="cover"
+                  borderRadius="25px"
+                />
+                <Text style={body} ml="2%">
+                  {info.desc}
+                </Text>
+              </Flex>
+            </Box>
+          </LinkBox>
+        </motion.div>
+      </Bounce>
     </>
   );
 };

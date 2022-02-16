@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import { useEffect, useRef, useState } from "react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 import { Document, Page, pdfjs } from "react-pdf";
+import { Link, Button, Element } from "react-scroll";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const IndexPage = () => {
@@ -29,11 +30,19 @@ const IndexPage = () => {
 
   return (
     <>
-      <HomeBar theme={theme} breakpoints={breakpoints} />
-      <HomePage theme={theme} breakpoints={breakpoints} />
-      <AboutPage theme={theme} breakpoints={breakpoints} />
-      <PortfolioPage theme={theme} breakpoints={breakpoints} />
-      <ConnectPage theme={theme} breakpoints={breakpoints} />
+      <HomeBar theme={theme} />
+      <Element name="home">
+        <HomePage theme={theme} />
+      </Element>
+      <Element name="about">
+        <AboutPage theme={theme} />
+      </Element>
+      <Element name="portfolio">
+        <PortfolioPage theme={theme} />
+      </Element>
+      <Element name="connect">
+        <ConnectPage theme={theme} />
+      </Element>
     </>
   );
 };

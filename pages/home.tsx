@@ -5,10 +5,11 @@ import img from "/imgs/img_home.gif";
 const HomePage = ({ theme, breakpoints }) => {
   const txt_heading = {
     fontWeight: "bold",
-    fontSize: 72,
+    fontSize: "4vw",
+    minFontSize: "2vw",
   };
   const txt_body = {
-    fontSize: 33,
+    fontSize: "2vw",
   };
   const txt_name = {
     color: theme[1],

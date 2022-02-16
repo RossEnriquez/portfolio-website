@@ -1,6 +1,8 @@
 import { Box, Flex, Text, Heading, Center } from "@chakra-ui/react";
 import ProjectModule from "../components/projectModule";
 import img from "/imgs/test-proj.png";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 
 const PortfolioPage = ({ theme, breakpoints }) => {
   const txt_heading = {
@@ -51,38 +53,46 @@ const PortfolioPage = ({ theme, breakpoints }) => {
   };
   return (
     <>
-      <Box overflowX="hidden">
+      <Box overflowX="hidden" mb="15vh">
         <Flex mt="125px" justifyContent="space-between">
-          <Box
-            style={accent}
-            w="40%"
-            data-aos="slide-right"
-            data-aos-anchor-placement="top-center"
-          />
-          <Heading
-            style={txt_heading}
-            alignSelf="center"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-          >
-            Portfolio
-          </Heading>
-          <Box
-            style={accent}
-            w="40%"
-            data-aos="slide-left"
-            data-aos-anchor-placement="top-center"
-          />
+          <Slide left>
+            <Box
+              style={accent}
+              w="35vw"
+              // data-aos="slide-right"
+              // data-aos-anchor-placement="top-center"
+            />
+          </Slide>
+          <Fade>
+            <Heading
+              style={txt_heading}
+              alignSelf="center"
+              // data-aos="fade-up"
+              // data-aos-anchor-placement="top-center"
+            >
+              Portfolio
+            </Heading>
+          </Fade>
+          <Slide right>
+            <Box
+              style={accent}
+              w="35vw"
+              // data-aos="slide-left"
+              // data-aos-anchor-placement="top-center"
+            />
+          </Slide>
         </Flex>
-        <Center m="25px 0">
-          <Text
-            style={txt_body}
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-          >
-            Here's a look at what I've built so far!
-          </Text>
-        </Center>
+        <Fade>
+          <Center m="25px 0">
+            <Text
+              style={txt_body}
+              // data-aos="fade-up"
+              // data-aos-anchor-placement="top-center"
+            >
+              Here's a look at what I've built so far!
+            </Text>
+          </Center>
+        </Fade>
         <Center>
           <Box w="35%" m="0 5%">
             <ProjectModule theme={theme} info={projects.proj_1} />

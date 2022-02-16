@@ -1,4 +1,5 @@
 import { Button, Flex } from "@chakra-ui/react";
+import { scroller } from "react-scroll";
 
 const HomeBar = ({ theme, breakpoints }) => {
   const btn_header = {
@@ -24,8 +25,14 @@ const HomeBar = ({ theme, breakpoints }) => {
             bg={theme[0]}
             boxShadow="base"
             _hover={{ bg: theme[1] }}
+            _focus={{ borderColor: "none" }}
             onClick={() => {
-              window.scrollTo(0, 0);
+              scroller.scrollTo("home", {
+                smooth: true,
+                duration: 1500,
+                offset: 0,
+              });
+              // window.scrollTo(0, 0);
             }}
           >
             Home
@@ -36,8 +43,14 @@ const HomeBar = ({ theme, breakpoints }) => {
             bg={theme[0]}
             boxShadow="base"
             _hover={{ bg: theme[1] }}
+            _focus={{ borderColor: "none" }}
             onClick={() => {
-              window.scrollTo(0, 1080);
+              scroller.scrollTo("about", {
+                smooth: true,
+                duration: 1500,
+                offset: -60,
+              });
+              // window.scrollTo(0, 1080);
             }}
           >
             About
@@ -47,6 +60,15 @@ const HomeBar = ({ theme, breakpoints }) => {
             bg={theme[0]}
             boxShadow="base"
             _hover={{ bg: theme[1] }}
+            _focus={{ borderColor: "none" }}
+            onClick={() => {
+              scroller.scrollTo("portfolio", {
+                smooth: true,
+                duration: 1000,
+                offset: 0,
+              });
+              // window.scrollTo(0, 1080);
+            }}
           >
             Portfolio
           </Button>
@@ -55,6 +77,15 @@ const HomeBar = ({ theme, breakpoints }) => {
             bg={theme[0]}
             boxShadow="base"
             _hover={{ bg: theme[1] }}
+            _focus={{ borderColor: "none" }}
+            onClick={() => {
+              scroller.scrollTo("connect", {
+                smooth: true,
+                duration: 1500,
+                offset: -50,
+              });
+              // window.scrollTo(0, 1080);
+            }}
           >
             Connect
           </Button>
