@@ -4,7 +4,7 @@ import img from "/imgs/test-proj.png";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
-const PortfolioPage = ({ theme }) => {
+const PortfolioPage = ({ theme, breakpoints }) => {
   const txt_heading = {
     fontWeight: "bold",
     fontSize: 72,

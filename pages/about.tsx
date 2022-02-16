@@ -3,7 +3,7 @@ import headshot from "/imgs/aboutme.jpg";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
-const AboutPage = ({ theme }) => {
+const AboutPage = ({ theme, breakpoints }) => {
   //   const myRef = useRef();
   //   const { inViewport } = useInViewport(myRef);
   //   const showComponent = useAnimation();
