@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Center } from "@chakra-ui/react";
 import SocialsCard from "../components/socialsCard";
 
-const ConnectPage = ({ theme }) => {
+const ConnectPage = ({ theme, breakpoints }) => {
   const txt_heading = {
     fontWeight: "bold",
     fontSize: 72,

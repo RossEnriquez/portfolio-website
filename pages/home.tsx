@@ -1,7 +1,8 @@
 import { Box, Flex, Text, Heading, Image, Center } from "@chakra-ui/react";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
 import img from "/imgs/img_home.gif";
 
-const HomePage = ({ theme }) => {
+const HomePage = ({ theme, breakpoints }) => {
   const txt_heading = {
     fontWeight: "bold",
     fontSize: 72,
@@ -12,26 +13,42 @@ const HomePage = ({ theme }) => {
   const txt_name = {
     color: theme[1],
   };
+
   return (
     <>
       <Flex
-        m="5% 0 5% 5%"
+        m={{ sm: "5em 0 5em 0", md: "5em 0 5em 4em" }}
         justifyContent="space-between"
+        display={{ sm: "block", md: "flex" }}
         h="101vh"
         overflowX="hidden"
       >
-        <Center w="50%">
-          <Box w="100%" mb="50%">
-            <Heading style={txt_heading}>Hi!</Heading>
-            <Heading style={txt_heading}>
+        <Center w="100%" maxH="60%">
+          <Box w="100%" minW="400px">
+            <Heading
+              style={txt_heading}
+              textAlign={{ sm: "center", md: "left" }}
+            >
+              Hi!
+            </Heading>
+            <Heading
+              style={txt_heading}
+              textAlign={{ sm: "center", md: "left" }}
+            >
               I'm <text style={txt_name}>Ross Enriquez</text>
             </Heading>
-            <Text style={txt_body} mt="20px">
+            <Text
+              style={txt_body}
+              mt="20px"
+              textAlign={{ sm: "center", md: "left" }}
+            >
               and I like learning anything and everything about software 😁
             </Text>
           </Box>
         </Center>
-        <Image ml="10%" src={img.src} boxSize="80%" objectFit="contain" />
+        <Center>
+          <Image src={img.src} minW="500px" maxW="900px" objectFit="contain" />
+        </Center>
       </Flex>
     </>
   );

@@ -8,13 +8,20 @@ import PortfolioPage from "./portfolio";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useRef, useState } from "react";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
 import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const IndexPage = () => {
   //sage green, tinted sage green, even more tinted sage green, red bean, lighter red
   const theme = ["#667b68", "#87A48A", "#b8c4bb", "#663f46", "#fceee9"];
-  const viewer = useRef(null);
+  const breakpoints = createBreakpoints({
+    sm: "30em",
+    md: "48em",
+    lg: "62em",
+    xl: "80em",
+    "2xl": "96em",
+  });
 
   useEffect(() => {
     Aos.init({});
@@ -22,11 +29,11 @@ const IndexPage = () => {
 
   return (
     <>
-      <HomeBar theme={theme} />
-      <HomePage theme={theme} />
-      <AboutPage theme={theme} />
-      <PortfolioPage theme={theme} />
-      <ConnectPage theme={theme} />
+      <HomeBar theme={theme} breakpoints={breakpoints} />
+      <HomePage theme={theme} breakpoints={breakpoints} />
+      <AboutPage theme={theme} breakpoints={breakpoints} />
+      <PortfolioPage theme={theme} breakpoints={breakpoints} />
+      <ConnectPage theme={theme} breakpoints={breakpoints} />
     </>
   );
 };

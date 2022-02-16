@@ -2,7 +2,7 @@ import { Box, Flex, Text, Heading, Center } from "@chakra-ui/react";
 import ProjectModule from "../components/projectModule";
 import img from "/imgs/test-proj.png";
 
-const PortfolioPage = ({ theme }) => {
+const PortfolioPage = ({ theme, breakpoints }) => {
   const txt_heading = {
     fontWeight: "bold",
     fontSize: 72,

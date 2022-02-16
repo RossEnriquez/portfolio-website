@@ -1,6 +1,6 @@
 import { Button, Flex } from "@chakra-ui/react";
 
-const HomeBar = ({ theme }) => {
+const HomeBar = ({ theme, breakpoints }) => {
   const btn_header = {
     width: "75px",
     borderRadius: "15px",
@@ -9,11 +9,11 @@ const HomeBar = ({ theme }) => {
   return (
     <>
       <Flex
-        justifyContent="flex-end"
+        justifyContent={{ sm: "center", md: "flex-end" }}
         bg={theme[0]}
         h={66}
         w="100vw"
-        pr="75px"
+        pr={{ sm: "0px", md: "75px" }}
         zIndex={2}
         position="fixed"
         top="0"

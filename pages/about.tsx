@@ -4,7 +4,7 @@ import { useInViewport } from "react-in-viewport";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-const AboutPage = ({ theme }) => {
+const AboutPage = ({ theme, breakpoints }) => {
   //   const myRef = useRef();
   //   const { inViewport } = useInViewport(myRef);
   //   const showComponent = useAnimation();
