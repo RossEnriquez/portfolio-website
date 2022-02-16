@@ -5,11 +5,10 @@ import img from "/imgs/img_home.gif";
 const HomePage = ({ theme, breakpoints }) => {
   const txt_heading = {
     fontWeight: "bold",
-    fontSize: "4vw",
-    minFontSize: "2vw",
+    fontSize: 72,
   };
   const txt_body = {
-    fontSize: "2vw",
+    fontSize: 32,
   };
   const txt_name = {
     color: theme[1],
@@ -18,30 +17,31 @@ const HomePage = ({ theme, breakpoints }) => {
   return (
     <>
       <Flex
-        m={{ sm: "5em 0 5em 0", md: "5em 0 5em 4em" }}
+        m={["7em 0", "7em 0", "5em 0 5em 4em"]}
         justifyContent="space-between"
-        display={{ sm: "block", md: "flex" }}
-        h="101vh"
+        display={["block", "block", "flex"]}
+        h="120vh"
         overflowX="hidden"
+        overflowY="hidden"
       >
-        <Center w="100%" maxH="60%">
+        <Center w="100%" maxH="60%" p="0 1em">
           <Box w="100%" minW="400px">
             <Heading
               style={txt_heading}
-              textAlign={{ sm: "center", md: "left" }}
+              textAlign={["center", "center", "left"]}
             >
               Hi!
             </Heading>
             <Heading
               style={txt_heading}
-              textAlign={{ sm: "center", md: "left" }}
+              textAlign={["center", "center", "left"]}
             >
               I'm <text style={txt_name}>Ross Enriquez</text>
             </Heading>
             <Text
               style={txt_body}
               mt="20px"
-              textAlign={{ sm: "center", md: "left" }}
+              textAlign={["center", "center", "left"]}
             >
               and I like learning anything and everything about software 😁
             </Text>

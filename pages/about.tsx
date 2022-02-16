@@ -30,37 +30,21 @@ const AboutPage = ({ theme, breakpoints }) => {
 
   return (
     <>
-      <Box mt="125px" overflowX="hidden">
+      <Box overflowX="hidden">
         <Flex ml="6.5vw" justifyContent="space-between">
           <Fade>
-            <Heading
-              style={txt_heading}
-              alignSelf="center"
-              // data-aos="fade-up"
-              // data-aos-anchor-placement="top-center"
-            >
+            <Heading style={txt_heading} alignSelf="center">
               About me
             </Heading>
           </Fade>
           <Slide right>
-            <Box
-              style={accent}
-              w="68vw"
-              // data-aos="slide-left"
-              // data-aos-anchor-placement="top-center"
-            />
+            <Box style={accent} w={["10vw", "10vw", "68vw"]} />
           </Slide>
         </Flex>
-        <Flex mt="50px">
+        <Flex mt="50px" display={{ md: "block", lg: "flex" }}>
           <Box w="65vw">
             <Fade>
-              <Text
-                style={txt_body}
-                w="75%"
-                ml="10%"
-                // data-aos="fade-up"
-                // data-aos-anchor-placement="top-center"
-              >
+              <Text style={txt_body} ml="10%" w="100%" bg="pink">
                 I’m a third-year{" "}
                 <text style={txt_bold}>
                   Computer Engineering (Software option)
@@ -73,11 +57,7 @@ const AboutPage = ({ theme, breakpoints }) => {
                 music!
               </Text>
             </Fade>
-            <Flex
-              mt="50px"
-              // data-aos="slide-right"
-              // data-aos-anchor-placement="top-center"
-            >
+            <Flex mt="50px">
               <Slide left>
                 <Box style={accent} w="8vw" mr="2vw" />
               </Slide>
@@ -88,13 +68,7 @@ const AboutPage = ({ theme, breakpoints }) => {
               </Fade>
             </Flex>
             <Fade>
-              <Text
-                style={txt_body}
-                m="5% 10%"
-                w="850px"
-                // data-aos="fade-up"
-                // data-aos-anchor-placement="bottom-bottom"
-              >
+              <Text style={txt_body} m="5% 10%" w="850px">
                 <Box>
                   <text style={txt_bold}>Portable Portfolio</text>
                 </Box>
@@ -109,8 +83,6 @@ const AboutPage = ({ theme, breakpoints }) => {
             objectFit="cover"
             borderRadius="50px"
             boxShadow="lg"
-            // data-aos="fade-in"
-            // data-aos-anchor-placement="center-bottom"
           />
         </Flex>
       </Box>

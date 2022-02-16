@@ -12,7 +12,7 @@ const HomeBar = ({ theme, breakpoints }) => {
       <Flex
         justifyContent={{ sm: "center", md: "flex-end" }}
         bg={theme[0]}
-        h={66}
+        h="70px"
         w="100vw"
         pr={{ sm: "0px", md: "75px" }}
         zIndex={2}
