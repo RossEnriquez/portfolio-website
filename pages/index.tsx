@@ -30,18 +30,18 @@ const IndexPage = () => {
 
   return (
     <>
-      <HomeBar theme={theme} breakpoints={breakpoints} />
+      <HomeBar theme={theme} />
       <Element name="home">
-        <HomePage theme={theme} breakpoints={breakpoints} />
+        <HomePage theme={theme} />
       </Element>
       <Element name="about">
-        <AboutPage theme={theme} breakpoints={breakpoints} />
+        <AboutPage theme={theme} />
       </Element>
       <Element name="portfolio">
-        <PortfolioPage theme={theme} breakpoints={breakpoints} />
+        <PortfolioPage theme={theme} />
       </Element>
       <Element name="connect">
-        <ConnectPage theme={theme} breakpoints={breakpoints} />
+        <ConnectPage theme={theme} />
       </Element>
     </>
   );

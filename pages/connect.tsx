@@ -3,7 +3,7 @@ import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import SocialsCard from "../components/socialsCard";
 
-const ConnectPage = ({ theme, breakpoints }) => {
+const ConnectPage = ({ theme }) => {
   const txt_heading = {
     fontWeight: "bold",
     fontSize: 72,

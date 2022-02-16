@@ -1,8 +1,7 @@
 import { Box, Flex, Text, Heading, Image, Center } from "@chakra-ui/react";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
 import img from "/imgs/img_home.gif";
 
-const HomePage = ({ theme, breakpoints }) => {
+const HomePage = ({ theme }) => {
   const txt_heading = {
     fontWeight: "bold",
     fontSize: 72,
@@ -20,7 +19,6 @@ const HomePage = ({ theme, breakpoints }) => {
         m={["7em 0", "7em 0", "5em 0 5em 4em"]}
         justifyContent="space-between"
         display={["block", "block", "flex"]}
-        h="120vh"
         overflowX="hidden"
         overflowY="hidden"
       >

@@ -1,7 +1,7 @@
 import { Button, Flex } from "@chakra-ui/react";
 import { scroller } from "react-scroll";
 
-const HomeBar = ({ theme, breakpoints }) => {
+const HomeBar = ({ theme }) => {
   const btn_header = {
     width: "75px",
     borderRadius: "15px",

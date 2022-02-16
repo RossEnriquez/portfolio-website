@@ -1,9 +1,18 @@
-import { Box, Flex, Text, Heading, Image, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Heading,
+  Image,
+  Button,
+  Center,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import headshot from "/imgs/aboutme.jpg";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
-const AboutPage = ({ theme, breakpoints }) => {
+const AboutPage = ({ theme }) => {
   //   const myRef = useRef();
   //   const { inViewport } = useInViewport(myRef);
   //   const showComponent = useAnimation();
@@ -12,21 +21,22 @@ const AboutPage = ({ theme, breakpoints }) => {
     fontWeight: "bold",
     fontSize: 72,
   };
-  const txt_subheading = {
-    fontWeight: "bold",
-    fontSize: 62,
-  };
-  const txt_body = {
-    fontSize: 33,
-  };
   const txt_bold = {
     fontWeight: "bold",
     color: theme[3],
   };
+  const fontSizes = {
+    heading: [],
+    subheading: [52, 52, 62],
+    body: [24, 24, 32],
+  };
+
   const accent = {
     height: "128px",
     background: theme[2],
   };
+
+  const [isMobile] = useMediaQuery("(max-width: 47em)");
 
   return (
     <>
@@ -41,10 +51,25 @@ const AboutPage = ({ theme, breakpoints }) => {
             <Box style={accent} w={["10vw", "10vw", "68vw"]} />
           </Slide>
         </Flex>
-        <Flex mt="50px" display={{ md: "block", lg: "flex" }}>
-          <Box w="65vw">
+        <Flex mt="50px" display={["block", "block", "flex"]}>
+          <Box w={["100vw", "100vw", "65vw"]}>
+            <Center display={["flex", "flex", "none"]}>
+              <Image
+                src={headshot.src}
+                boxSize={["75%", "75%", "75%"]}
+                objectFit="contain"
+                borderRadius="10%"
+                boxShadow="lg"
+              />
+            </Center>
+
             <Fade>
-              <Text style={txt_body} ml="10%" w="100%" bg="pink">
+              <Text
+                fontSize={fontSizes.body}
+                w="100%"
+                p="5% 10%"
+                textAlign={["center", "center", "left"]}
+              >
                 I’m a third-year{" "}
                 <text style={txt_bold}>
                   Computer Engineering (Software option)
@@ -62,13 +87,22 @@ const AboutPage = ({ theme, breakpoints }) => {
                 <Box style={accent} w="8vw" mr="2vw" />
               </Slide>
               <Fade>
-                <Heading style={txt_subheading} alignSelf="center">
+                <Heading
+                  fontSize={fontSizes.subheading}
+                  fontWeight="bold"
+                  alignSelf="center"
+                >
                   What I'm currently up to
                 </Heading>
               </Fade>
             </Flex>
             <Fade>
-              <Text style={txt_body} m="5% 10%" w="850px">
+              <Text
+                fontSize={fontSizes.body}
+                p={["5% 0", "5% 0", "5% 10%"]}
+                w="100%"
+                textAlign={["center", "center", "left"]}
+              >
                 <Box>
                   <text style={txt_bold}>Portable Portfolio</text>
                 </Box>
@@ -79,9 +113,10 @@ const AboutPage = ({ theme, breakpoints }) => {
           </Box>
           <Image
             src={headshot.src}
-            boxSize="25%"
-            objectFit="cover"
-            borderRadius="50px"
+            display={["none", "none", "flex"]}
+            boxSize={["75%", "75%", "25%"]}
+            objectFit="contain"
+            borderRadius="10%"
             boxShadow="lg"
           />
         </Flex>
