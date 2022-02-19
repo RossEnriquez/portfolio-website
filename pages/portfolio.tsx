@@ -35,7 +35,7 @@ const PortfolioPage = ({ theme }) => {
       link: "https://github.com/joeelmahallawy/rec-repo",
     },
     proj_2: {
-      name: "VALORANT Statistics Tracker",
+      name: "VALORANT Tracker",
       tools: "Python, Discord API",
       desc: "A Discord bot that fetches data from a VALORANT statistics tracker and displays them in embedded Discord messages.",
       img: img.src,
@@ -79,7 +79,7 @@ const PortfolioPage = ({ theme }) => {
             </Text>
           </Center>
         </Fade>
-        <Center display={["block", "block", "flex"]} bg="pink">
+        <Center display={["block", "block", "flex"]}>
           <Box w={["100%", "100%", "650px"]} p="0 5%">
             <ProjectModule theme={theme} info={projects.proj_1} />
             <ProjectModule theme={theme} info={projects.proj_2} />

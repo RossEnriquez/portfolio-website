@@ -30,7 +30,7 @@ const HomeBar = ({ theme }) => {
               scroller.scrollTo("home", {
                 smooth: true,
                 duration: 1500,
-                offset: 0,
+                offset: -50,
               });
               // window.scrollTo(0, 0);
             }}
@@ -48,7 +48,7 @@ const HomeBar = ({ theme }) => {
               scroller.scrollTo("about", {
                 smooth: true,
                 duration: 1500,
-                offset: -60,
+                offset: -100,
               });
               // window.scrollTo(0, 1080);
             }}
@@ -65,7 +65,7 @@ const HomeBar = ({ theme }) => {
               scroller.scrollTo("portfolio", {
                 smooth: true,
                 duration: 1000,
-                offset: 0,
+                offset: 30,
               });
               // window.scrollTo(0, 1080);
             }}
@@ -82,7 +82,7 @@ const HomeBar = ({ theme }) => {
               scroller.scrollTo("connect", {
                 smooth: true,
                 duration: 1500,
-                offset: -50,
+                offset: -100,
               });
               // window.scrollTo(0, 1080);
             }}

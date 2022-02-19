@@ -40,17 +40,15 @@ const SocialsCard = ({ theme }) => {
   return (
     <>
       <Box
-        w="30%"
+        w={["300px", "300px", "500px"]}
         borderRadius="15px"
         boxShadow="base"
         overflow="hidden"
-        // data-aos="flip-left"
-        // data-aos-anchor-placement="top-center"
       >
         <Fade>
           <Box>
             <Image src={img.src} w="100%" />
-            <Center w="100%" mt="-75px" overflowWrap="normal">
+            <Center w="100%" mt="-75px">
               <Image
                 src={dp.src}
                 borderRadius="full"
@@ -63,8 +61,10 @@ const SocialsCard = ({ theme }) => {
                 Ross Enriquez
               </Heading>
             </Center>
-            <Center>
-              <Text>Computer Engineering Student at Ryerson University</Text>
+            <Center p="2%">
+              <Text textAlign="center">
+                Computer Engineering Student at Ryerson University
+              </Text>
             </Center>
             <Center mb="5%">
               <Text color="gray.500">Brampton, Ontario, Canada</Text>

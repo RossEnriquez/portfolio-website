@@ -19,7 +19,7 @@ const ResumeModal = ({ isOpen, onClose, theme }) => {
     <>
       <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent w={800}>
           <ModalHeader alignSelf="center">My Resume</ModalHeader>
           <ModalCloseButton />
           <ModalBody>

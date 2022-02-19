@@ -7,7 +7,6 @@ const ProjectModule = ({ theme, info }) => {
   const title = {
     color: theme[3],
     fontWeight: "bold",
-    fontSize: 25,
   };
   const body = {
     fontSize: 20,
@@ -16,7 +15,8 @@ const ProjectModule = ({ theme, info }) => {
     heading: [],
     subheading: [52, 52, 62],
     body: [24, 24, 32],
-    description: [16, 16, 20],
+    title: [22, 22, 22],
+    description: [16, 16, 18],
   };
   return (
     <>
@@ -33,7 +33,7 @@ const ProjectModule = ({ theme, info }) => {
               boxShadow="md"
             >
               <LinkOverlay href={info.link}>
-                <Text style={title}>
+                <Text style={title} fontSize={fontSizes.title}>
                   {info.name} ({info.tools})
                 </Text>
               </LinkOverlay>
@@ -45,12 +45,7 @@ const ProjectModule = ({ theme, info }) => {
                   objectFit="cover"
                   borderRadius="25px"
                 />
-                <Text
-                  fontSize={fontSizes.description}
-                  ml="2%"
-                  bg="lightblue"
-                  maxH="30vh"
-                >
+                <Text fontSize={fontSizes.description} ml="2%" maxH="30vh">
                   {info.desc}
                 </Text>
               </Flex>

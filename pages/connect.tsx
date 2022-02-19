@@ -20,26 +20,15 @@ const ConnectPage = ({ theme }) => {
       <Box overflowX="hidden">
         <Flex>
           <Slide left>
-            <Box
-              style={accent}
-              w="60vw"
-              mr="3vw"
-              // data-aos="slide-right"
-              // data-aos-anchor-placement="top-center"
-            />
+            <Box style={accent} w={["10vw", "10vw", "60vw"]} mr="3vw" />
           </Slide>
           <Fade>
-            <Heading
-              style={txt_heading}
-              alignSelf="center"
-              // data-aos="fade-up"
-              // data-aos-anchor-placement="top-center"
-            >
+            <Heading style={txt_heading} alignSelf="center">
               Let's Connect!
             </Heading>
           </Fade>
         </Flex>
-        <Center m="5% 0">
+        <Center p="5% 0">
           <SocialsCard theme={theme} />
         </Center>
       </Box>

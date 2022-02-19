@@ -45,7 +45,7 @@ const HomePage = ({ theme }) => {
             </Text>
           </Box>
         </Center>
-        <Center>
+        <Center pl={[10, 0, 0]}>
           <Image src={img.src} minW="500px" maxW="900px" objectFit="contain" />
         </Center>
       </Flex>
