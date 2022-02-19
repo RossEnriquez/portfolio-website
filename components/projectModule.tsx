@@ -12,14 +12,17 @@ const ProjectModule = ({ theme, info }) => {
   const body = {
     fontSize: 20,
   };
+  const fontSizes = {
+    heading: [],
+    subheading: [52, 52, 62],
+    body: [24, 24, 32],
+    description: [16, 16, 20],
+  };
   return (
     <>
       <Bounce bottom>
         <motion.div whileHover={{ y: -10, transition: { duration: 0.3 } }}>
-          <LinkBox
-          // data-aos="zoom-in-up"
-          // data-aos-anchor-placement="bottom-bottom"
-          >
+          <LinkBox>
             <Box
               w="100%"
               h="40vh"
@@ -42,7 +45,12 @@ const ProjectModule = ({ theme, info }) => {
                   objectFit="cover"
                   borderRadius="25px"
                 />
-                <Text style={body} ml="2%">
+                <Text
+                  fontSize={fontSizes.description}
+                  ml="2%"
+                  bg="lightblue"
+                  maxH="30vh"
+                >
                   {info.desc}
                 </Text>
               </Flex>
