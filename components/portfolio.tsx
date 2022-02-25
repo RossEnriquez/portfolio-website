@@ -4,28 +4,11 @@ import img from "/imgs/test-proj.png";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
-const PortfolioPage = ({ theme }) => {
-  const txt_heading = {
-    fontWeight: "bold",
-    fontSize: 72,
-  };
-  const txt_body = {
-    fontSize: 33,
-  };
-  const txt_bold = {
-    fontWeight: "bold",
-    color: theme[3],
-  };
+const PortfolioPage = ({ theme, fontSizes }) => {
   const accent = {
     height: "128px",
     background: theme[2],
   };
-  const fontSizes = {
-    heading: [],
-    subheading: [52, 52, 62],
-    body: [24, 24, 32],
-  };
-
   const projects = {
     proj_1: {
       name: "Indilator",
@@ -64,7 +47,7 @@ const PortfolioPage = ({ theme }) => {
             <Box style={accent} w={["10vw", "10vw", "35vw"]} />
           </Slide>
           <Fade>
-            <Heading style={txt_heading} alignSelf="center">
+            <Heading fontWeight="bold" fontSize={fontSizes.heading} py="5%">
               Portfolio
             </Heading>
           </Fade>
@@ -81,12 +64,28 @@ const PortfolioPage = ({ theme }) => {
         </Fade>
         <Center display={["block", "block", "flex"]}>
           <Box w={["100%", "100%", "650px"]} p="0 5%">
-            <ProjectModule theme={theme} info={projects.proj_1} />
-            <ProjectModule theme={theme} info={projects.proj_2} />
+            <ProjectModule
+              theme={theme}
+              info={projects.proj_1}
+              fontSizes={fontSizes}
+            />
+            <ProjectModule
+              theme={theme}
+              info={projects.proj_2}
+              fontSizes={fontSizes}
+            />
           </Box>
           <Box w={["100%", "100%", "650px"]} p="0 5%">
-            <ProjectModule theme={theme} info={projects.proj_3} />
-            <ProjectModule theme={theme} info={projects.proj_4} />
+            <ProjectModule
+              theme={theme}
+              info={projects.proj_3}
+              fontSizes={fontSizes}
+            />
+            <ProjectModule
+              theme={theme}
+              info={projects.proj_4}
+              fontSizes={fontSizes}
+            />
           </Box>
         </Center>
       </Box>

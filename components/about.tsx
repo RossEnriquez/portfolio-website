@@ -1,49 +1,29 @@
-import {
-  Box,
-  Flex,
-  Text,
-  Heading,
-  Image,
-  Button,
-  Center,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Image, Center } from "@chakra-ui/react";
 import headshot from "/imgs/aboutme.jpg";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
-const AboutPage = ({ theme }) => {
-  //   const myRef = useRef();
-  //   const { inViewport } = useInViewport(myRef);
-  //   const showComponent = useAnimation();
-
-  const txt_heading = {
-    fontWeight: "bold",
-    fontSize: 72,
-  };
+const AboutPage = ({ theme, fontSizes }) => {
   const txt_bold = {
     fontWeight: "bold",
     color: theme[3],
   };
-  const fontSizes = {
-    heading: [],
-    subheading: [52, 52, 62],
-    body: [24, 24, 32],
-  };
-
   const accent = {
     height: "128px",
     background: theme[2],
   };
-
-  const [isMobile] = useMediaQuery("(max-width: 47em)");
 
   return (
     <>
       <Box overflowX="hidden">
         <Flex ml="6.5vw" justifyContent="space-between">
           <Fade>
-            <Heading style={txt_heading} alignSelf="center">
+            <Heading
+              fontWeight="bold"
+              fontSize={fontSizes.heading}
+              py="5%"
+              alignSelf="center"
+            >
               About me
             </Heading>
           </Fade>
@@ -90,7 +70,7 @@ const AboutPage = ({ theme }) => {
                 <Heading
                   fontSize={fontSizes.subheading}
                   fontWeight="bold"
-                  alignSelf="center"
+                  py="3%"
                 >
                   What I'm currently up to
                 </Heading>

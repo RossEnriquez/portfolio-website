@@ -3,14 +3,7 @@ import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import SocialsCard from "../components/socialsCard";
 
-const ConnectPage = ({ theme }) => {
-  const txt_heading = {
-    fontWeight: "bold",
-    fontSize: 72,
-  };
-  const txt_body = {
-    fontSize: 33,
-  };
+const ConnectPage = ({ theme, fontSizes }) => {
   const accent = {
     height: "128px",
     background: theme[2],
@@ -23,7 +16,7 @@ const ConnectPage = ({ theme }) => {
             <Box style={accent} w={["10vw", "10vw", "60vw"]} mr="3vw" />
           </Slide>
           <Fade>
-            <Heading style={txt_heading} alignSelf="center">
+            <Heading fontWeight="bold" fontSize={fontSizes.heading}>
               Let's Connect!
             </Heading>
           </Fade>

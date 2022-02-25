@@ -1,18 +1,7 @@
 import { Box, Flex, Text, Heading, Image, Center } from "@chakra-ui/react";
 import img from "/imgs/img_home.gif";
 
-const HomePage = ({ theme }) => {
-  const txt_heading = {
-    fontWeight: "bold",
-    fontSize: 72,
-  };
-  const txt_body = {
-    fontSize: 32,
-  };
-  const txt_name = {
-    color: theme[1],
-  };
-
+const HomePage = ({ theme, fontSizes }) => {
   return (
     <>
       <Flex
@@ -25,19 +14,21 @@ const HomePage = ({ theme }) => {
         <Center w="100%" maxH="60%" p="0 1em">
           <Box w="100%" minW="400px">
             <Heading
-              style={txt_heading}
+              fontWeight="bold"
+              fontSize={fontSizes.heading}
               textAlign={["center", "center", "left"]}
             >
               Hi!
             </Heading>
             <Heading
-              style={txt_heading}
+              fontWeight="bold"
+              fontSize={fontSizes.heading}
               textAlign={["center", "center", "left"]}
             >
-              I'm <text style={txt_name}>Ross Enriquez</text>
+              I'm <text style={{ color: theme[1] }}>Ross Enriquez</text>
             </Heading>
             <Text
-              style={txt_body}
+              fontSize={32}
               mt="20px"
               textAlign={["center", "center", "left"]}
             >

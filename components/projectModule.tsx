@@ -1,23 +1,20 @@
-import { Box, Flex, Text, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Image,
+  LinkBox,
+  LinkOverlay,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Bounce from "react-reveal/Bounce";
-//import img from "/imgs/test-proj.png";
 
-const ProjectModule = ({ theme, info }) => {
-  const title = {
-    color: theme[3],
-    fontWeight: "bold",
-  };
-  const body = {
-    fontSize: 20,
-  };
-  const fontSizes = {
-    heading: [],
-    subheading: [52, 52, 62],
-    body: [24, 24, 32],
-    title: [22, 22, 22],
-    description: [16, 16, 18],
-  };
+const ProjectModule = ({ theme, info, fontSizes }) => {
+  const bgColor = useColorModeValue(
+    "rgba(0, 0, 0, 0.05)",
+    "rgba(255, 255, 255, 0.05)"
+  );
   return (
     <>
       <Bounce bottom>
@@ -27,13 +24,18 @@ const ProjectModule = ({ theme, info }) => {
               w="100%"
               h="40vh"
               p="3%"
-              bg="gray.100"
+              // bg="gray.100"
+              bg={bgColor}
               m="10% 0"
               borderRadius="15px"
               boxShadow="md"
             >
               <LinkOverlay href={info.link}>
-                <Text style={title} fontSize={fontSizes.title}>
+                <Text
+                  color={theme[3]}
+                  fontWeight="bold"
+                  fontSize={fontSizes.title}
+                >
                   {info.name} ({info.tools})
                 </Text>
               </LinkOverlay>
