@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import HomeBar from "../components/homeBar";
-import AboutPage from "./about";
-import ConnectPage from "./connect";
-import HomePage from "./home";
-import PortfolioPage from "./portfolio";
+import AboutPage from "../components/about";
+import ConnectPage from "../components/connect";
+import HomePage from "../components/home";
+import PortfolioPage from "../components/portfolio";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
