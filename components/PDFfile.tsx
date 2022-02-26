@@ -1,6 +1,4 @@
-import { View } from "@react-pdf/renderer";
 import { Document, Page } from "react-pdf";
-import { Text } from "@chakra-ui/react";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 const PDFfile = ({ resume }) => {

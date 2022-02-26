@@ -22,13 +22,13 @@ const ProjectModule = ({ theme, info, fontSizes }) => {
           <LinkBox>
             <Box
               w="100%"
-              h="40vh"
+              h={["275px", "275px", "250px"]}
               p="3%"
-              // bg="gray.100"
               bg={bgColor}
               m="10% 0"
               borderRadius="15px"
               boxShadow="md"
+              overflow="hidden"
             >
               <LinkOverlay href={info.link}>
                 <Text
