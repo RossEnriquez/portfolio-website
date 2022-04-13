@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { pdfjs } from "react-pdf";
 import { Element } from "react-scroll";
 import { useColorModeValue } from "@chakra-ui/react";
+import Head from "next/head";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const IndexPage = () => {
