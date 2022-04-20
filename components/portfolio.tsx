@@ -1,6 +1,9 @@
 import { Box, Flex, Text, Heading, Center } from "@chakra-ui/react";
 import ProjectModule from "../components/projectModule";
 import img from "/imgs/test-proj.png";
+import indilator from "/imgs/proj_indilator.png";
+import valorant from "/imgs/proj_valorant.jpg";
+import weatherapp from "/imgs/proj_weatherapp.png";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
@@ -14,21 +17,21 @@ const PortfolioPage = ({ theme, fontSizes }) => {
       name: "Indilator",
       tools: "NextJS, MongoDB",
       desc: "A web app that translates words between English, Ojibway, and Mohawk that aims to preserve the language of Indigenous communities.",
-      img: img.src,
+      img: indilator.src,
       link: "https://github.com/joeelmahallawy/rec-repo",
     },
     proj_2: {
       name: "VALORANT Tracker",
       tools: "Python, Discord API",
       desc: "A Discord bot that fetches data from a VALORANT statistics tracker and displays them in embedded Discord messages.",
-      img: img.src,
+      img: valorant.src,
       link: "https://github.com/RossEnriquez/VALORANT-Stat-Tracker",
     },
     proj_3: {
       name: "Weather App",
       tools: "NextJS",
       desc: "A web app that fetches the weather forecast for the next six days using the user’s location and displays it on a modern UI.",
-      img: img.src,
+      img: weatherapp.src,
       link: "https://github.com/RossEnriquez/weather-app",
     },
     proj_4: {
