@@ -1,9 +1,6 @@
 import { Box, Flex, Text, Heading, Center } from "@chakra-ui/react";
 import ProjectModule from "../components/projectModule";
-import img from "/imgs/test-proj.png";
-import indilator from "/imgs/proj_indilator.png";
-import valorant from "/imgs/proj_valorant.jpg";
-import weatherapp from "/imgs/proj_weatherapp.png";
+import projects from "../helpers/project-list";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
@@ -12,36 +9,7 @@ const PortfolioPage = ({ theme, fontSizes }) => {
     height: "128px",
     background: theme[2],
   };
-  const projects = {
-    proj_1: {
-      name: "Indilator",
-      tools: "NextJS, MongoDB",
-      desc: "A web app that translates words between English, Ojibway, and Mohawk that aims to preserve the language of Indigenous communities.",
-      img: indilator.src,
-      link: "https://github.com/joeelmahallawy/rec-repo",
-    },
-    proj_2: {
-      name: "VALORANT Tracker",
-      tools: "Python, Discord API",
-      desc: "A Discord bot that fetches data from a VALORANT statistics tracker and displays them in embedded Discord messages.",
-      img: valorant.src,
-      link: "https://github.com/RossEnriquez/VALORANT-Stat-Tracker",
-    },
-    proj_3: {
-      name: "Weather App",
-      tools: "NextJS",
-      desc: "A web app that fetches the weather forecast for the next six days using the user’s location and displays it on a modern UI.",
-      img: weatherapp.src,
-      link: "https://github.com/RossEnriquez/weather-app",
-    },
-    proj_4: {
-      name: "General Processing Unit",
-      tools: "VHDL",
-      desc: "A functional General Processing Unit (GPU) implemented using latches, 4x16 decoders, FSMs, and an ALU to output 15 user-defined functions.",
-      img: img.src,
-      link: "#",
-    },
-  };
+
   return (
     <>
       <Box overflowX="hidden" mb="15vh">
@@ -86,7 +54,7 @@ const PortfolioPage = ({ theme, fontSizes }) => {
             />
             <ProjectModule
               theme={theme}
-              info={projects.proj_4}
+              info={projects.proj_5}
               fontSizes={fontSizes}
             />
           </Box>

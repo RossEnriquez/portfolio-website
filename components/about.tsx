@@ -1,5 +1,6 @@
 import { Box, Flex, Text, Heading, Image, Center } from "@chakra-ui/react";
 import headshot from "/imgs/aboutme.jpg";
+import wordle from "/imgs/wordle.png";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
@@ -83,11 +84,12 @@ const AboutPage = ({ theme, fontSizes }) => {
                 w="100%"
                 textAlign={["center", "center", "left"]}
               >
-                <Box>
-                  <text style={txt_bold}>Portable Portfolio</text>
-                </Box>
-                learning full stack web development through project building
-                with 3 group members
+                <Flex>
+                  <Image src={wordle.src} boxSize="40px" />
+                  <text style={txt_bold}>Wordle Clone</text>
+                </Flex>
+                creating a clone of the popular game "Wordle" using NextJS and
+                MongoDB
               </Text>
             </Fade>
           </Box>
