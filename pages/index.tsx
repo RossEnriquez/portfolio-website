@@ -7,10 +7,10 @@ import PortfolioPage from "../components/portfolio";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { pdfjs } from "react-pdf";
+// import { pdfjs } from "react-pdf";
 import { Element } from "react-scroll";
 import { useColorModeValue } from "@chakra-ui/react";
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const IndexPage = () => {
   const boldColor = useColorModeValue("#663f46", "#db8494");
