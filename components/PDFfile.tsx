@@ -7,8 +7,8 @@ const PDFfile = ({ resume }) => {
       <Document file={resume}>
         <Page
           pageNumber={1}
-          style={{ opacity: "10%" }}
-          width={[650]}
+          // style={{ opacity: "10%" }}
+          // width={[650]}
           renderAnnotationLayer={true}
         />
       </Document>
