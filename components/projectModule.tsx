@@ -42,7 +42,7 @@ const ProjectModule = ({ theme, info, fontSizes }) => {
               <Flex mt="2%">
                 <Image
                   src={info.img}
-                  w="50%"
+                  minW="40%"
                   h="180px"
                   objectFit="cover"
                   borderRadius="25px"

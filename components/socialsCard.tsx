@@ -14,7 +14,6 @@ import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
-import Flip from "react-reveal/Flip";
 import Fade from "react-reveal/Fade";
 import dp from "/imgs/linkedin.jpg";
 import img from "/imgs/test-proj.png";
@@ -22,20 +21,11 @@ import { useState } from "react";
 import ResumeModal from "./resumeModal";
 
 const SocialsCard = ({ theme }) => {
-  const email = "ross.enriquez@ryerson.ca";
+  const email = "ross.enriquez@torontomu.ca";
   const [clipboard, setClipboard] = useState(email);
   const { hasCopied, onCopy } = useClipboard(clipboard);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const toast = useToast();
-
-  const title = {
-    color: theme[3],
-    fontWeight: "bold",
-    fontSize: 25,
-  };
-  const body = {
-    fontSize: 20,
-  };
 
   return (
     <>
@@ -63,11 +53,11 @@ const SocialsCard = ({ theme }) => {
             </Center>
             <Center p="2%">
               <Text textAlign="center">
-                Computer Engineering Student at Ryerson University
+                Software Developer @ ECCC | Software Engineering Student @ TMU
               </Text>
             </Center>
             <Center mb="5%">
-              <Text color="gray.500">Brampton, Ontario, Canada</Text>
+              <Text color="gray.500">Toronto, Ontario, Canada</Text>
             </Center>
             <Center>
               <Center mt="1%">

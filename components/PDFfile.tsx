@@ -1,4 +1,4 @@
-import { Document, Page } from "react-pdf";
+import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 const PDFfile = ({ resume }) => {

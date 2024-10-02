@@ -51,16 +51,14 @@ const AboutPage = ({ theme, fontSizes }) => {
                 p="5% 10%"
                 textAlign={["center", "center", "left"]}
               >
-                I’m a third-year{" "}
-                <text style={txt_bold}>
-                  Computer Engineering (Software option)
-                </text>{" "}
-                student at <text style={txt_bold}>Ryerson University</text>. I
+                I’m a fifth-year{" "}
+                <text style={txt_bold}>Software Engineering</text> student at{" "}
+                <text style={txt_bold}>Toronto Metropolitan University</text>. I
                 enjoy building cool projects using
                 <text style={txt_bold}> ReactJS</text> and making Discord bots
-                using <text style={txt_bold}>Python</text>. When I’m not coding,
-                you can probably find me playing video games or listening to
-                music!
+                using <text style={txt_bold}>discord.py</text>. When I’m not
+                coding, you can catch me playing volleyball 🏐 or playing video
+                games with my friends 👥
               </Text>
             </Fade>
             <Flex mt="50px">
@@ -85,11 +83,10 @@ const AboutPage = ({ theme, fontSizes }) => {
                 textAlign={["center", "center", "left"]}
               >
                 <Flex>
-                  <Image src={wordle.src} boxSize="40px" />
-                  <text style={txt_bold}>Wordle Clone</text>
+                  <text style={txt_bold}>Student + Software Developer 👨🏻‍💻</text>
                 </Flex>
-                creating a clone of the popular game "Wordle" using NextJS and
-                MongoDB
+                finishing off my last year of Software Engineering and working
+                as a part-time Software Developer at Environment Canada
               </Text>
             </Fade>
           </Box>

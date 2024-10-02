@@ -28,9 +28,7 @@ const PortfolioPage = ({ theme, fontSizes }) => {
         </Flex>
         <Fade>
           <Center m="25px 0">
-            <Text fontSize={fontSizes.body}>
-              Here's a look at what I've built so far!
-            </Text>
+            <Text fontSize={fontSizes.body}>Check out some of my work!</Text>
           </Center>
         </Fade>
         <Center display={["block", "block", "flex"]}>

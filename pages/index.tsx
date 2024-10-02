@@ -6,7 +6,7 @@ import PortfolioPage from "../components/portfolio";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { pdfjs } from "react-pdf";
 import { Element } from "react-scroll";
 import { useColorModeValue } from "@chakra-ui/react";
@@ -25,26 +25,31 @@ const IndexPage = () => {
     description: [16, 16, 18],
   };
 
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
+    setIsClient(true);
     Aos.init({});
   }, []);
 
   return (
-    <>
-      <HomeBar theme={theme} />
-      <Element name="home">
-        <HomePage theme={theme} fontSizes={fontSizes} />
-      </Element>
-      <Element name="about">
-        <AboutPage theme={theme} fontSizes={fontSizes} />
-      </Element>
-      <Element name="portfolio">
-        <PortfolioPage theme={theme} fontSizes={fontSizes} />
-      </Element>
-      <Element name="connect">
-        <ConnectPage theme={theme} fontSizes={fontSizes} />
-      </Element>
-    </>
+    isClient && (
+      <>
+        <HomeBar theme={theme} />
+        <Element name="home">
+          <HomePage theme={theme} fontSizes={fontSizes} />
+        </Element>
+        <Element name="about">
+          <AboutPage theme={theme} fontSizes={fontSizes} />
+        </Element>
+        <Element name="portfolio">
+          <PortfolioPage theme={theme} fontSizes={fontSizes} />
+        </Element>
+        <Element name="connect">
+          <ConnectPage theme={theme} fontSizes={fontSizes} />
+        </Element>
+      </>
+    )
   );
 };
 

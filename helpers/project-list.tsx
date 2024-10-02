@@ -1,6 +1,6 @@
 import img from "/imgs/test-proj.png";
 import indilator from "/imgs/proj_indilator.png";
-import valorant from "/imgs/proj_valorant.jpg";
+import vbbot from "/imgs/proj_vbbot.png";
 import weatherapp from "/imgs/proj_weatherapp.png";
 import bookstore from "/imgs/proj_bookstore.png";
 
@@ -13,11 +13,11 @@ const projects = {
     link: "https://github.com/joeelmahallawy/rec-repo",
   },
   proj_2: {
-    name: "VALORANT Tracker",
-    tools: "Python, Discord API",
-    desc: "A Discord bot that fetches data from a VALORANT statistics tracker and displays them in embedded Discord messages.",
-    img: valorant.src,
-    link: "https://github.com/RossEnriquez/VALORANT-Stat-Tracker",
+    name: "Volleyball Drop-In Bot",
+    tools: "discord.py, Firebase",
+    desc: "A Discord bot that automates volleyball drop-in court selections, bookings, and event reminders.",
+    img: vbbot.src,
+    link: "https://github.com/RossEnriquez/volleyball-runs-discord-bot",
   },
   proj_3: {
     name: "Weather App",
