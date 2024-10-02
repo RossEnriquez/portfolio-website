@@ -23,9 +23,7 @@ const ResumeModal = ({ isOpen, onClose, theme }) => {
           <ModalHeader alignSelf="center">My Resume</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Center>
-              <PDFfile resume={resume} />
-            </Center>
+            <Center>{/* <PDFfile resume={resume} /> */}</Center>
           </ModalBody>
           <ModalFooter>
             <a
