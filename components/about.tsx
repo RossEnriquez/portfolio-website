@@ -1,4 +1,12 @@
-import { Box, Flex, Text, Heading, Image, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Heading,
+  Image,
+  Center,
+  Link,
+} from "@chakra-ui/react";
 import headshot from "/imgs/aboutme.jpg";
 import wordle from "/imgs/wordle.png";
 import Fade from "react-reveal/Fade";
@@ -83,10 +91,15 @@ const AboutPage = ({ theme, fontSizes }) => {
                 textAlign={["center", "center", "left"]}
               >
                 <Flex>
-                  <text style={txt_bold}>Student + Software Developer 👨🏻‍💻</text>
+                  <text style={txt_bold}>Student + Wannabe YouTuber 👨🏻‍💻</text>
                 </Flex>
-                finishing off my last year of Software Engineering and working
-                as a part-time Software Developer at Environment Canada
+                finishing off my last year of Software Engineering while making
+                Volleyball highlight videos with my friends :)
+                <div>
+                  <Link href="https://www.youtube.com/@ABGsVolleyball">
+                    <Text fontWeight="bold">➡️ Check us out! ⬅️</Text>
+                  </Link>
+                </div>
               </Text>
             </Fade>
           </Box>
