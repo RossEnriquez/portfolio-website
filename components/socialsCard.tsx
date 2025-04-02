@@ -15,7 +15,7 @@ import { SocialIcon } from "react-social-icons";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 import Fade from "react-reveal/Fade";
-import dp from "/imgs/linkedin.jpg";
+import dp from "/imgs/linkedin2.jpeg";
 import img from "/imgs/test-proj.png";
 import { useState } from "react";
 import ResumeModal from "./resumeModal";
@@ -41,6 +41,7 @@ const SocialsCard = ({ theme }) => {
             <Center w="100%" mt="-75px">
               <Image
                 src={dp.src}
+                w="200px"
                 borderRadius="full"
                 border="4px"
                 borderColor="white"
