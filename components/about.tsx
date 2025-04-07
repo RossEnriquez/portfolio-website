@@ -95,11 +95,6 @@ const AboutPage = ({ theme, fontSizes }) => {
                 </Flex>
                 finishing off my last year of Software Engineering while making
                 Volleyball highlight videos with my friends :)
-                <div>
-                  <Link href="https://www.youtube.com/@ABGsVolleyball">
-                    <Text fontWeight="bold">➡️ Check us out! ⬅️</Text>
-                  </Link>
-                </div>
               </Text>
             </Fade>
           </Box>
