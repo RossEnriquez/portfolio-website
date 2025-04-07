@@ -91,7 +91,7 @@ const AboutPage = ({ theme, fontSizes }) => {
                 textAlign={["center", "center", "left"]}
               >
                 <Flex>
-                  <text style={txt_bold}>Student + Wannabe YouTuber 👨🏻‍💻</text>
+                  <text style={txt_bold}>Student + Volleyball 👨🏻‍💻</text>
                 </Flex>
                 finishing off my last year of Software Engineering while making
                 Volleyball highlight videos with my friends :)
