@@ -7,7 +7,7 @@ import {
   Center,
   Link,
 } from "@chakra-ui/react";
-import headshot from "/imgs/aboutme.jpg";
+import headshot from "/imgs/aboutme_2.jpg";
 import wordle from "/imgs/wordle.png";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
