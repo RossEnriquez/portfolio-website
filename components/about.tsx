@@ -59,8 +59,8 @@ const AboutPage = ({ theme, fontSizes }) => {
                 p="5% 10%"
                 textAlign={["center", "center", "left"]}
               >
-                I’m a fifth-year{" "}
-                <text style={txt_bold}>Software Engineering</text> student at{" "}
+                I’m a <text style={txt_bold}>Software Engineering</text>{" "}
+                graduate at{" "}
                 <text style={txt_bold}>Toronto Metropolitan University</text>. I
                 enjoy building cool projects using
                 <text style={txt_bold}> ReactJS</text> and making Discord bots
@@ -91,10 +91,18 @@ const AboutPage = ({ theme, fontSizes }) => {
                 textAlign={["center", "center", "left"]}
               >
                 <Flex>
-                  <text style={txt_bold}>Student + Volleyball 👨🏻‍💻</text>
+                  <text style={txt_bold}>Developer + Volleyball 👨🏻‍💻</text>
                 </Flex>
-                finishing off my last year of Software Engineering while making
+                working as an Application Developer at CIBC while making
                 Volleyball highlight videos with my friends :)
+                <Flex>
+                  <Link
+                    variant="underline"
+                    href="https://www.youtube.com/@ABGsVolleyball"
+                  >
+                    ➡️ Check us out!
+                  </Link>
+                </Flex>
               </Text>
             </Fade>
           </Box>
