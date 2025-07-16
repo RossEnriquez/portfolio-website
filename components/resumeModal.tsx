@@ -14,7 +14,7 @@ import {
 import PDFfile from "./PDFfile";
 
 const ResumeModal = ({ isOpen, onClose, theme }) => {
-  const resume = "/Software_Resume_Ross_Enriquez.pdf";
+  const resume = "/Ross_Enriquez_Resume.pdf";
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose} size="2xl">
@@ -23,7 +23,9 @@ const ResumeModal = ({ isOpen, onClose, theme }) => {
           <ModalHeader alignSelf="center">My Resume</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Center>{/* <PDFfile resume={resume} /> */}</Center>
+            <Center>
+              <PDFfile resume={resume} />
+            </Center>
           </ModalBody>
           <ModalFooter>
             <a
