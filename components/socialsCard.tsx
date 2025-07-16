@@ -21,7 +21,7 @@ import { useState } from "react";
 import ResumeModal from "./resumeModal";
 
 const SocialsCard = ({ theme }) => {
-  const email = "ross.enriquez@torontomu.ca";
+  const email = "enriquez.ross091@gmail.com";
   const [clipboard, setClipboard] = useState(email);
   const { hasCopied, onCopy } = useClipboard(clipboard);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -53,9 +53,7 @@ const SocialsCard = ({ theme }) => {
               </Heading>
             </Center>
             <Center p="2%">
-              <Text textAlign="center">
-                Software Developer @ ECCC | Software Engineering Student @ TMU
-              </Text>
+              <Text textAlign="center">Application Developer @ CIBC</Text>
             </Center>
             <Center mb="5%">
               <Text color="gray.500">Toronto, Ontario, Canada</Text>
