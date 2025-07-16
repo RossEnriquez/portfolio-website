@@ -1,7 +1,7 @@
 import img from "/imgs/test-proj.png";
 import indilator from "/imgs/proj_indilator.png";
 import vbbot from "/imgs/proj_vbbot.png";
-import weatherapp from "/imgs/proj_weatherapp.png";
+import diarization from "/imgs/proj_diarization.png";
 import bookstore from "/imgs/proj_bookstore.png";
 
 const projects = {
@@ -20,11 +20,11 @@ const projects = {
     link: "https://github.com/RossEnriquez/volleyball-runs-discord-bot",
   },
   proj_3: {
-    name: "Weather App",
-    tools: "NextJS",
-    desc: "A web app that fetches the weather forecast for the next six days using the user’s location and displays it on a modern UI.",
-    img: weatherapp.src,
-    link: "https://github.com/RossEnriquez/weather-app",
+    name: "Speaker Diarization System",
+    tools: "Flask, PyTorch",
+    desc: "An end-to-end speaker diarization application with real-time and pre-recorded functionalities.",
+    img: diarization.src,
+    link: "https://drive.google.com/file/d/18tTWTmo4cUmTZ6zGrkXLEg2NvbYqHQoS/view?usp=sharing",
   },
   proj_4: {
     name: "General Processing Unit",
