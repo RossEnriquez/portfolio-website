@@ -18,22 +18,15 @@ const HomePage = ({ theme, fontSizes }) => {
               fontSize={fontSizes.heading}
               textAlign={["center", "center", "left"]}
             >
-              Hi!
+              Hey!
             </Heading>
             <Heading
               fontWeight="bold"
               fontSize={fontSizes.heading}
               textAlign={["center", "center", "left"]}
             >
-              I'm <text style={{ color: theme[1] }}>Ross Enriquez</text>
+              I'm <text style={{ color: theme[1] }}>Ross</text> 👋🏼
             </Heading>
-            <Text
-              fontSize={32}
-              mt="20px"
-              textAlign={["center", "center", "left"]}
-            >
-              and I like learning anything and everything about software 😁
-            </Text>
           </Box>
         </Center>
         <Center pl={[10, 0, 0]}>
