@@ -35,24 +35,24 @@ const PortfolioPage = ({ theme, fontSizes }) => {
           <Box w={["100%", "100%", "650px"]} p="0 5%">
             <ProjectModule
               theme={theme}
-              info={projects.proj_1}
+              info={projects.proj_2}
               fontSizes={fontSizes}
             />
             <ProjectModule
               theme={theme}
-              info={projects.proj_2}
+              info={projects.proj_3}
               fontSizes={fontSizes}
             />
           </Box>
           <Box w={["100%", "100%", "650px"]} p="0 5%">
             <ProjectModule
               theme={theme}
-              info={projects.proj_3}
+              info={projects.proj_5}
               fontSizes={fontSizes}
             />
             <ProjectModule
               theme={theme}
-              info={projects.proj_5}
+              info={projects.proj_1}
               fontSizes={fontSizes}
             />
           </Box>
