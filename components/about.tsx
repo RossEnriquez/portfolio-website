@@ -62,11 +62,11 @@ const AboutPage = ({ theme, fontSizes }) => {
                 I’m a <text style={txt_bold}>Software Engineering</text>{" "}
                 graduate at{" "}
                 <text style={txt_bold}>Toronto Metropolitan University</text>. I
-                enjoy building cool projects using
+                enjoy building cool stuff with
                 <text style={txt_bold}> ReactJS</text> and making Discord bots
-                using <text style={txt_bold}>discord.py</text>. When I’m not
-                coding, you can catch me playing volleyball 🏐 or playing video
-                games with my friends 👥
+                with <text style={txt_bold}>discord.py</text>. When I’m not
+                coding, you can catch me playing volleyball 🏐 , taking pictures
+                📸 , or going on long walks 💨 !
               </Text>
             </Fade>
             <Flex mt="50px">
