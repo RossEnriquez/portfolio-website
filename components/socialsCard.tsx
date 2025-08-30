@@ -15,7 +15,7 @@ import { SocialIcon } from "react-social-icons";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 import Fade from "react-reveal/Fade";
-import dp from "/imgs/linkedin2.jpeg";
+import dp from "/imgs/linkedin.jpeg";
 import img from "/imgs/test-proj.png";
 import { useState } from "react";
 import ResumeModal from "./resumeModal";
@@ -95,6 +95,11 @@ const SocialsCard = ({ theme }) => {
                 whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
               >
                 <SocialIcon url="https://www.linkedin.com/in/ross-enriquez/" />
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+              >
+                <SocialIcon url="https://www.youtube.com/@ABGsVolleyball" />
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
