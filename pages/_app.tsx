@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/next";
 import theme from "../theme";
 import "@fontsource/source-sans-pro/";
 import "@react-pdf-viewer/core/lib/styles/index.css";
@@ -8,6 +9,7 @@ import Head from "next/head";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ChakraProvider theme={theme}>
+    <Analytics />
     <Head>
       <title>Ross Enriquez</title>
       <link rel="shortcut icon" href="/favicon.ico" />
