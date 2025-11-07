@@ -104,7 +104,7 @@ const SocialsCard = ({ theme }) => {
               <motion.div
                 whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
               >
-                <SocialIcon url="https://www.instagram.com/en.riquez/?hl=en" />
+                <SocialIcon url="https://www.instagram.com/ross.enriquezz/?hl=en" />
               </motion.div>
             </Center>
             <ResumeModal isOpen={isOpen} onClose={onClose} theme={theme} />
