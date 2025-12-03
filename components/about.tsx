@@ -65,8 +65,8 @@ const AboutPage = ({ theme, fontSizes }) => {
                 enjoy building cool stuff with
                 <text style={txt_bold}> ReactJS</text> and making Discord bots
                 with <text style={txt_bold}>discord.py</text>. When I’m not
-                coding, you can catch me playing volleyball 🏐 , taking pictures
-                📸 , or going on long walks 💨 !
+                coding, you can catch me playing volleyball 🏐 or taking
+                pictures 📸!
               </Text>
             </Fade>
             <Flex mt="50px">
